@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJS Multiverse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+        body {
+            font-family: Helvetica;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        h1, h2 {
+            color: #FF6A0E;
+        }
+
+        h2 {
+            border-bottom: 2px solid #006035;
+            padding-bottom: 5px;
+        }
+
+        .gallery, .store {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery .col, .store .col {
+            border: 1px solid #333333;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .img-fluid {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+    </style>
+    <script language="JavaScript">
+        document.addEventListener("DOMContentLoaded", function() {
+            const books = [
+                { title: "Memories that lead to War - Vol. 1", author: "Autores Nicoly S. Fiorindo, Daniela C. K. Jeske e Raquel C. K. Jeske", image: "https://i.pinimg.com/736x/4e/c2/ba/4ec2ba053275feb82b16360365971066.jpg" },
+                { title: "Miraa de no Hansha - A decisão de amar", author: "Autores Nicoly S. Fiorindo e Raquel C. K. Jeske", image: "https://i.pinimg.com/474x/82/b7/9d/82b79df854a75a56627a905e1f2b5e53.jpg" }
+            ];
+
+            const gallery = document.querySelector(".gallery");
+            books.forEach(book => {
+                const bookDiv = document.createElement("div");
+                bookDiv.classList.add("col");
+                bookDiv.innerHTML = `
+                    <img src="${book.image}" alt="${book.title}" class="img-fluid">
+                    <h3>${book.title}</h3>
+                    <p>${book.author}</p>`;
+                gallery.appendChild(bookDiv);
+            });
+
+            const store = document.querySelector(".store");
+            books.forEach(book => {
+                const storeDiv = document.createElement("div");
+                storeDiv.classList.add("col");
+                storeDiv.innerHTML = `
+                    <img src="${book.image}" alt="${book.title}" class="img-fluid">
+                    <h3>${book.title}</h3>
+                    <p>${book.author}</p>
+                    <button class="btn btn-primary">Comprar</button>`;
+                store.appendChild(storeDiv);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>MJS</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#novos-lancamentos">Novos Lançamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#venda-online">Venda Online</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/mjs_multiverse/" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="text-center my-5">
+        <h2>Um pouco sobre nós:</h2>
+        <h5>" Este será um livro muito estranho...se não gosta de coisas assim, pare de ler agora mesmo"</h5>
+        <p>
+            Esse foi o começo da história de como começamos este livro maravilhoso.
+            Com apenas essa frase escrita, eu, Nicoly, estava  em meu quarto, sozinha e pensativa, pois há dois dias havia sido desafiada a escrever algo bom sem a ajuda de outros. 
+            Felizmente minha prima Raquel também foi desafiada e estava tão bloqueada quanto. Então, por curiosidade descidiu ler aquelas poucas palavras escritas e nós duas escrevemos a história que depois de 3 anos pudemos publicar e hoje temos o primeiro livro da MJS.
+            Infelizmente por conta de alguns problemas pessoais não fizemos sua devida publicidade e poucos sabiam que já está disponível.
+            Mas estou realmente grata por ter esse livro em nosso nome.
+        </p>
+    </section>
+
+    <section id="novos-lancamentos" class="container my-5">
+        <h2 class="text-center">Novos Lançamentos</h2>
+        <div class="row gallery">
+        </div>
+    </section>
+
+    <section id="venda-online" class="container my-5">
+        <h2 class="text-center">Venda Online</h2>
+        <div class="row store">
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
