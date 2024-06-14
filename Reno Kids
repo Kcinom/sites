@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reno Teens</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            width: 150px;
+            height: auto;
+        }
+
+        .header h1 {
+            color: #00FF00;
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            padding: 20px;
+            margin-bottom: 60px;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .footer img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .instagram {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .instagram a {
+            color: #00FFFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a style="color:#ADFF2F;" href="#home">Início</a>
+        <a href="#about">Sobre</a>
+        <a href="#events">Eventos</a>
+        <a href="#contact">Contato</a>
+    </div>
+    <div class="header">
+        <img src="https://i.pinimg.com/736x/1a/42/d4/1a42d4f25db69d67e2b78d97a73d77f8.jpg">
+    </div>
+    <div class="content">
+        <h2 id="home" style="color:#ADFF2F">Bem-vindo ao site dos Reno Teens!</h2>
+        <p style="color:white">Somos um grupo de adolescentes da Igreja Presbiteriana Renovada de Marcelândia, com idades entre 9 e 14 anos. Nosso objetivo é compartilhar momentos de fé, diversão e amizade.</p>
+        <div class="instagram">
+            <h3 style="color:#ADFF2F">Siga-nos no Instagram!</h3>
+            <a href="https://www.instagram.com/renoteens_iprmarcelandia/" target="_blank">@renoteens_iprmarcelandia</a>
+        </div>
+</body>
+</html>
